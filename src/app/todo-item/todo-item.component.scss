@@ -1,0 +1,94 @@
+.todo-item {
+    margin-right: 3.5rem;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+
+    &__delete {
+        display: inline-block;
+        position: absolute;
+        top:50%;
+        right: 0;
+        transform: translate(0, -50%);
+        font-weight: 1.1em;
+        color: coral;
+        text-decoration: none;
+        transition: all .2s ease;
+
+        &:hover {
+            transform: translate(-4%, -54%);
+            text-shadow: 1px 1px darken(coral, 20);
+        }
+
+        &:focus {
+            transform: translate(4%, -46%);
+            text-shadow: none;
+        }
+    }
+
+    // Custom checkbox (took from W3School and modified)
+    /* Customize the label (the container) */
+    .container {
+        display: inline-block;
+        position: relative;
+        padding-left: 3.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+         /* Hide the browser's default checkbox */
+         input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked ~ .title {
+                text-decoration: line-through;
+            }
+
+             /* When the checkbox is checked, add a darkcyan background */
+            &:checked ~ .checkmark {
+                background-color: lighten(darkcyan, 5) !important;
+
+                /* Show the checkmark when checked */
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+        /* On mouse-over, add a grey background color */
+        &:hover input ~ .checkmark {
+            background-color: #ccc;  
+        }
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: #eee;
+        transform: translateY(-50%);
+        border-radius: 1px;
+
+         /* Create the checkmark/indicator (hidden when not checked) */
+        &::after {
+            content: "\2714";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -51%);
+            color: #fefefe;
+            font-size: 0.85em;
+        }
+    }
+}

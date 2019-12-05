@@ -1,0 +1,30 @@
+.add-todo-form {
+    display: flex;
+    margin-right: 3rem;
+    position: relative;
+    
+    &::before {
+        display: block;
+        content: '\2795';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 2rem;
+    }
+
+    input {
+        flex:10;
+        padding-left: 3.5rem;
+    }
+
+    button {
+        flex: 2;
+        &:disabled {
+            background-color: #cecece;
+            border-color: #cecece;
+            cursor: not-allowed;
+        }
+    }
+
+}
