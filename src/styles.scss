@@ -26,7 +26,7 @@ body {
 
 input {
     padding: 1rem;
-    
+
     outline: none;
     border: none;
     font-family: inherit;
@@ -88,4 +88,13 @@ button {
         display: inline-block;
         transform: skewX(30deg);
     }
+}
+
+.github-link {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    width: 4rem;
+    height: 4rem;
+    background: url('./assets/github.svg') no-repeat;
 }

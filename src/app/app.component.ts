@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TO-DOs';
+  repoLink = 'https://github.com/ivan-lyutskanov/hello-angular';
 }
