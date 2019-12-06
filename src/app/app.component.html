@@ -1,11 +1,8 @@
-<a href="{{repoLink}}" class="github-link" target="_blank"></a>
+<a routerLink="/about" class="about-page-link" title="About"></a>
 
-<router-outlet>
-  <div class="container">
-    <h1 class="heading1 u-mt-big u-mb-small"><span class="text">{{title}}</span></h1>
-    <app-todos></app-todos>
-  </div>
-</router-outlet>
+<router-outlet></router-outlet>
+
+<a href="{{repoLink}}" class="github-link" target="_blank" title="Link to code repo"></a>
 
 <ngx-spinner
 bdOpacity = 0.9

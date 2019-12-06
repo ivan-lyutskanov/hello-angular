@@ -5,16 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodosComponent } from './todos/todos.component';
-import { TodoItemComponent } from './todo-item/todo-item.component';
-import { AddTodoComponent } from './add-todo/add-todo.component';
+import { TodosComponent } from './components/todos/todos.component';
+import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { AboutComponent } from './pages/about/about.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     TodoItemComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

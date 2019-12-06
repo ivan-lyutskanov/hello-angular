@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../services/todo.service';
+import { TodoService } from '../../services/todo.service';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Todo } from '../models/Todo';
+import { Todo } from '../../models/Todo';
 
 @Component({
   selector: 'app-todos',
@@ -14,11 +14,6 @@ export class TodosComponent implements OnInit {
 
   ngOnInit() {
     this.spinner.show();
-
-    // setTimeout(() => {
-    //   /** spinner ends after 5 seconds */
-    //   this.spinner.hide();
-    // }, 5000);
 
     this.todoService.getTodos().subscribe(todos => {
       this.todos = todos;

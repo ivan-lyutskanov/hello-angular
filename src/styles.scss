@@ -89,15 +89,35 @@ button {
     }
 }
 
-.github-link {
-    position: absolute;
-    top: 2rem;
-    right: 4rem;
+@mixin nav-link($icon_url) {
     width: 4rem;
     height: 4rem;
-    background: url('./assets/github.svg') no-repeat;
+    background: url($icon_url) no-repeat;
     transition: transform 0.3s ease;
     &:hover {
         transform: scale(1.1);
     }
 }
+
+.github-link {
+    @include nav-link('./assets/github.svg'); 
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.about-page-link {
+    @include nav-link('./assets/question.svg');
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+.home-page-link {
+    display: block;
+    margin: 2rem 0;
+    width: 3rem;
+    height: 3rem;
+    background: url('./assets/back-arrow.svg') no-repeat;
+}
+
