@@ -1,7 +1,18 @@
+<a href="{{repoLink}}" class="github-link" target="_blank"></a>
+
 <router-outlet>
   <div class="container">
-    <a href="{{repoLink}}" class="github-link" target="_blank"></a>
     <h1 class="heading1 u-mt-big u-mb-small"><span class="text">{{title}}</span></h1>
     <app-todos></app-todos>
   </div>
 </router-outlet>
+
+<ngx-spinner
+bdOpacity = 0.9
+bdColor = "#ffffff"
+size = "large"
+color = "#008b8b "
+type = "ball-beat"
+[fullScreen] = "true"
+>
+</ngx-spinner>
